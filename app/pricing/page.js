@@ -2,7 +2,7 @@ import React from 'react'
 
 function pricing() {
     return (
-        <div>pricing</div>
+        <div className='text-teal-700'>pricing</div>
     )
 }
 
