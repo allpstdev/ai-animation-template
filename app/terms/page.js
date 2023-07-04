@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Privacy() {
+function termsAndCondition() {
     return (
         <div className="mx-72 my-24 text-teal-700">
-            <h2 className="font-bold text-teal-900">Privacy</h2>
+            <h2 className="font-bold text-teal-900">Terms & Condition</h2>
             1. Datenschutz Auf Einen Blick Allgemeine Hinweise Die folgenden Hinweise geben einen einfachen Überblick
             darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene
             Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum
@@ -185,4 +185,4 @@ function Privacy() {
     );
 }
 
-export default Privacy;
+export default termsAndCondition;

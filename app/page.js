@@ -1,135 +1,147 @@
+import { MyComponent } from '@/components/Swiper';
 /* eslint-disable react/no-unescaped-entities */
-import Image from 'next/image'
-import React from 'react'
+import Image from 'next/image';
+import React from 'react';
+
+import demo from '../public/demo.png';
+import image1 from '../public/image1.png';
+import image2 from '../public/image2.png';
+import image3 from '../public/image3.png';
+import image4 from '../public/image4.png';
+import left_arrow from '../public/left-arrow.svg';
+import right_arrow from '../public/right-arrow.svg';
 
 const HomePage = () => {
-  return (
-    <>
-
-      <section className="relative bg-[url(https://images.unsplash.com/photo-1604014237800-1c9102c219da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80)] bg-cover bg-center bg-no-repeat">
-        <div className="absolute inset-0 bg-black/40 sm:bg-black/40 sm:from-black/40 sm:to-black/40 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l" />
-
-        <div className="relative mx-20 max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
-          <div className="max-w-xl text-left">
-            <h1 className="text-3xl font-extrabold sm:text-5xl">
-              Let us find your
-
-              <strong className="block font-extrabold text-teal-600">
-                Forever Home.
-              </strong>
+    return (
+        <div className=''>
+            <h1 className="m-10 text-center text-4xl font-bold tracking-widest sm:text-7xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-9xl">
+                Fundamentals
             </h1>
-
-            <p className="mt-4 max-w-lg sm:text-xl/relaxed">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo
-              tenetur fuga ducimus numquam ea!
-            </p>
-
-            <div className="mt-8 flex flex-wrap gap-4 text-center">
-              <a href="#" className="block w-full rounded bg-teal-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto">
-                Get Started
-              </a>
-
-              <a href="#" className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-teal-600 shadow hover:text-teal-700 focus:outline-none focus:ring active:text-teal-500 sm:w-auto">
-                Learn More
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="overflow-hidden bg-[url(https://images.unsplash.com/photo-1562157873-818bc0726f68?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3000&q=80)] bg-cover bg-top bg-no-repeat">
-        <div className="bg-black/40 p-8 md:p-12 lg:px-16 lg:py-24">
-          <div className="text-center ltr:sm:text-left rtl:sm:text-right">
-            <h2 className="text-2xl font-bold text-white sm:text-3xl md:text-5xl">
-              Latest Homes
+            <h2 className="mb-24 text-center text-2xl font-medium tracking-widest sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-7xl">
+                Artificial Intelligence AG
             </h2>
 
-            <p className="mx-auto max-w-lg text-white/90 md:mt-6 md:block md:text-lg md:leading-relaxed">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore
-              officia corporis quasi doloribus iure architecto quae voluptatum beatae
-              excepturi dolores.
-            </p>
+            <h4 className="mb-2 px-44 text-center text-xl font-light tracking-[-0.0001em] sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-5xl">
+                {`We build forward-thinking AI technology and make it available in user-centric apps.`}
+            </h4>
+            <Image
+                alt="demo"
+                src={demo}
+                width="0"
+                height="0"
+                sizes="100vw"
+                className="w-100vw mx-auto my-12 h-auto"
+            />
+            <section className="bg-[#FDF9F5D9] pb-12 px-44 pt-24">
+                <div className="grid grid-cols-1 gap-3 lg:grid-cols-4 lg:gap-4">
+                    <div className="flex flex-1 flex-col p-4 place-items-center gap-3 rounded-3xl border-2 border-black">
+                        <Image
+                            alt="media production and animation image"
+                            src={image1}
+                            width="0"
+                            height="0"
+                            className='w-52 h-3/4'
+                        />
+                        <p className="text-center text-3xl font-normal">Media production and animation</p>
+                    </div>
+                    <div className="flex flex-1 flex-col p-4 place-items-center gap-3 rounded-3xl border-2 border-black">
+                        <Image
+                            alt="Creation of virtual worlds image"
+                            src={image2}
+                            width="0"
+                            height="0"
+                            className='w-52 h-3/4'
+                        />
+                        <p className="text-center text-3xl font-normal">Creation of virtual worlds</p>
+                    </div>
+                    <div className="flex flex-1 flex-col p-4 place-items-center gap-3 rounded-3xl border-2 border-black">
+                        <Image
+                            alt="Augmentation of creative workflows image"
+                            src={image3}
+                            width="0"
+                            height="0"
+                            className='w-52 h-3/4'
+                        />
+                        <p className="text-center text-3xl font-normal">Augmentation of creative workflows</p>
+                    </div>
+                    <div className="flex flex-1 flex-col p-4 place-items-center gap-3 rounded-3xl border-2 border-black">
+                        <Image
+                            alt="Make AI available to users image"
+                            src={image4}
+                            width="0"
+                            height="0"
+                            className='w-52 h-3/4'
+                        />
+                        <p className="text-center text-3xl font-normal">Make AI available to users</p>
+                    </div>
+                </div>
+                <div className='mt-32'>
+                    <h3 className="mb-12 text-left text-2xl font-light tracking-[0.25em] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
+                        About
+                    </h3>
+                    <p className='text-3xl leading-[2.25em] font-normal text-justify'>Fundamentals Artificial Intelligence AG is a future-oriented tech company devoted to identifying, researching, and developing software products enhancing design-focused workflows using AI and related technologies. We are committed to contributing to a safe and controlled global AI space. Our focus is on intuitive, user-centric tools for artists, designers, media producers, and creators to step up their game using cutting-edge technology.  </p>
+                </div>
+                <div className='mt-36'>
+                    <h3 className="mb-12 text-left text-2xl font-light tracking-[0.25em] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
+                        Try creating videos with AI
+                    </h3>
+                    <p className='text-3xl leading-[2.25em] font-normal text-justify'>
+                        Motion Generative Artificial Intelligence for everyone? <span className='font-bold'>Here you go!</span> Try our AI video generator for free. Get yourself a Fundamentals log-in and start creating beautiful animated content based on simple text prompts. You receive all rights for your content.
+                    </p>
+                </div>
+                <Image
+                    alt="demo"
+                    src={demo}
+                    width="0"
+                    height="0"
+                    sizes="100vw"
+                    className="w-full my-12 h-auto"
+                />
+                <div className='mt-32'>
+                    <h3 className="mb-12 text-left text-2xl font-light tracking-[0.25em] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
+                        Topics
+                    </h3>
+                    <div className="flex flex-col items-center justify-center w-full gap-6">
+                        <div className="w-full border-2 border-black flex items-center justify-center rounded-[24px] h-96 bg-[url('../public/topic_1.png')] bg-cover bg-no-repeat">
+                            <p className="text-center tracking-widest text-7xl">MediaTech</p>
+                        </div>
+                        <div className="w-full border-2 border-black flex items-center justify-center rounded-[24px] h-96 bg-[url('../public/topic_2.png')] bg-cover bg-no-repeat">
+                            <p className="text-center tracking-widest text-7xl">Real Estate</p>
+                        </div>
+                    </div>
+                </div>
+                <div className='mt-32'>
+                    <h3 className="mb-12 text-left text-2xl font-light tracking-[0.25em] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
+                        News
+                    </h3>
+                    <div className="grid grid-cols-1 gap-3 xl:grid-cols-3 xl:gap-6 h-[700px]">
+                        <div className="flex flex-1 flex-col p-4 place-items-center gap-3 rounded-3xl border-[3px] border-black bg-white">
+                            <div className='w-full h-2/5 border-[3px] border-black rounded-2xl bg-[#FDF9F5D9]'>
 
-            <div className="mt-4 sm:mt-8">
-              <a href="#" className="inline-block rounded-full bg-teal-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-teal-700 focus:outline-none focus:ring focus:ring-yellow-400">
-                Get Yours Today
-              </a>
-            </div>
-          </div>
+                            </div>
+                            <p className="text-justify text-xl leading-10 h-3/5 font-inter">Integrate generative AI into your animation workflow, decrease production time and budget and be in control of the creative process of your project like never before. With Fundamentals Motion Maker.</p>
+                        </div>
+                        <div className="flex flex-1 flex-col p-4 place-items-center gap-3 rounded-3xl border-[3px] border-black bg-white">
+                            <div className='w-full h-2/5 border-[3px] border-black rounded-2xl bg-[#FDF9F5D9]'>
+
+                            </div>
+                            <p className="text-justify text-xl leading-10 h-3/5 font-inter">Integrate generative AI into your animation workflow, decrease production time and budget and be in control of the creative process of your project like never before. With Fundamentals Motion Maker.</p>
+                        </div>
+                        <div className="flex flex-1 flex-col p-4 place-items-center gap-3 rounded-3xl border-[3px] border-black bg-white">
+                            <div className='w-full h-2/5 border-[3px] border-black rounded-2xl bg-[#FDF9F5D9]'>
+
+                            </div>
+                            <p className="text-justify text-xl leading-10 h-3/5 font-inter">Integrate generative AI into your animation workflow, decrease production time and budget and be in control of the creative process of your project like never before. With Fundamentals Motion Maker.</p>
+                        </div>
+                    </div>
+                    <div className='flex justify-end mt-12 gap-10'>
+                        <Image src={left_arrow} width={100} height={100} alt='left arrow for news swiper' />
+                        <Image src={right_arrow} width={100} height={100} alt='right arrow for news swiper' />
+                    </div>
+                </div>
+            </section>
         </div>
-      </section>
+    )
+};
 
-      <section>
-        <div className="bg-white mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-            <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
-              <Image width={400} height={400} alt="Party" src={"https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"} className="absolute inset-0 h-full w-full object-cover" />
-            </div>
-
-            <div className="lg:py-24">
-              <h2 className="text-3xl font-bold sm:text-4xl text-teal-500">Grow your audience</h2>
-
-              <p className="mt-4 text-gray-600">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut qui hic
-                atque tenetur quis eius quos ea neque sunt, accusantium soluta minus
-                veniam tempora deserunt? Molestiae eius quidem quam repellat.
-              </p>
-
-              <a href="#" className="mt-8 inline-block rounded bg-teal-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-teal-700 focus:outline-none focus:ring focus:ring-yellow-400">
-                Get Started Today
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="bg-white mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-            <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-first lg:h-full">
-              <Image width={400} height={400} alt="Party" src={"https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"} className="absolute inset-0 h-full w-full object-cover" />
-            </div>
-
-            <div className="lg:py-24">
-              <h2 className="text-3xl font-bold sm:text-4xl text-teal-500">Grow your audience</h2>
-
-              <p className="mt-4 text-gray-600">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut qui hic
-                atque tenetur quis eius quos ea neque sunt, accusantium soluta minus
-                veniam tempora deserunt? Molestiae eius quidem quam repellat.
-              </p>
-
-              <a href="#" className="mt-8 inline-block rounded bg-teal-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-teal-700 focus:outline-none focus:ring focus:ring-yellow-400">
-                Get Started Today
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="bg-white mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-            <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
-              <Image width={400} height={400} alt="Party" src={"https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"} className="absolute inset-0 h-full w-full object-cover" />
-            </div>
-
-            <div className="lg:py-24">
-              <h2 className="text-3xl font-bold sm:text-4xl text-teal-500">Grow your audience</h2>
-
-              <p className="mt-4 text-gray-600">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut qui hic
-                atque tenetur quis eius quos ea neque sunt, accusantium soluta minus
-                veniam tempora deserunt? Molestiae eius quidem quam repellat.
-              </p>
-
-              <a href="#" className="mt-8 inline-block rounded bg-teal-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-teal-700 focus:outline-none focus:ring focus:ring-yellow-400">
-                Get Started Today
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
-
-export default HomePage
+export default HomePage;
