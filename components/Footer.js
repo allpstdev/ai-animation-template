@@ -35,7 +35,7 @@ const Footer = () => {
                                 <div className="mb-6 mt-6 md:mb-0">
                                     <div className="grid place-items-center text-base font-normal tracking-default text-black sm:grid-cols-1 md:grid-cols-2 md:place-items-start 2xl:grid-cols-5">
                                         <Link href={`/about`}>About</Link>
-                                        <Link href={`/`}>Technology</Link>
+                                        <Link href={`/technology`}>Technology</Link>
                                         <Link href={`/pricing`}>Products</Link>
                                         <Link href={`/contact`} className="text-violet-300">
                                             Try<span className="font-bold"> Motion Maker </span>for free
