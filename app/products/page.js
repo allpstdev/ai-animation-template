@@ -1,4 +1,5 @@
 import Header from '@/components/Header'
+import PageDescription from '@/components/PageDescription'
 import SubHeader from '@/components/SubHeader'
 import Image from 'next/image'
 
@@ -11,10 +12,8 @@ const ProductsPage = () => {
         <div>
             <Header text={'Products'} />
             <SubHeader text={'May we introduce? - AI'} />
+            <PageDescription text={`We build forward-thinking AI technology and make it available in user-centric apps.`} />
 
-            <h4 className="mb-2 px-44 text-center text-xl font-light tracking-[-0.0001em] sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-5xl">
-                {`We build forward-thinking AI technology and make it available in user-centric apps. `}
-            </h4>
             <Image
                 alt="demo"
                 src={demo}

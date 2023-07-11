@@ -1,5 +1,7 @@
-import Content from '@/components/Content';
+import ContentDescription from '@/components/content/Description';
+import ContentHeader from '@/components/content/Header';
 import Header from '@/components/Header';
+import PageDescription from '@/components/PageDescription';
 import SubHeader from '@/components/SubHeader';
 import { MyComponent } from '@/components/Swiper'
 /* eslint-disable react/no-unescaped-entities */
@@ -19,10 +21,8 @@ const HomePage = () => {
         <div className=''>
             <Header text={'Fundamentals'} />
             <SubHeader text={'Artificial Intelligence AG'} />
+            <PageDescription text={`We build forward-thinking AI technology and make it available in user-centric apps.`} />
 
-            <h4 className="mb-2 px-44 text-center text-xl font-light tracking-[-0.0001em] sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-5xl">
-                {`We build forward-thinking AI technology and make it available in user-centric apps.`}
-            </h4>
             <Image
                 alt="demo"
                 src={demo}
@@ -79,11 +79,8 @@ const HomePage = () => {
                     </div>
                 </div>
                 <div className="mt-32">
-                    <h3 className="mb-12 text-left text-2xl font-light tracking-[0.25em] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
-                        About
-                    </h3>
-                    <p className="text-justify text-3xl font-normal leading-[2.25em]">
-                        Fundamentals Artificial Intelligence AG is a
+                    <ContentHeader text={'About'} />
+                    <ContentDescription text={`Fundamentals Artificial Intelligence AG is a
                         future-oriented tech company devoted to identifying,
                         researching, and developing software products enhancing
                         design-focused workflows using AI and related
@@ -91,26 +88,23 @@ const HomePage = () => {
                         and controlled global AI space. Our focus is on
                         intuitive, user-centric tools for artists, designers,
                         media producers, and creators to step up their game
-                        using cutting-edge technology.{' '}
-                    </p>
+                        using cutting-edge technology.`}
+                    />
                 </div>
-                <Content
+                {/* <Content
                     styles={'mt-32'}
                     header={'About'}
-                    description={`Fundamentals Artificial Intelligence AG is a future-oriented tech company devoted to identifying, researching, and developing software products enhancing design-focused workflows using AI and related technologies. We are committed to contributing to a safe and controlled global AI space. Our focus is on intuitive, user-centric tools for artists, designers, media producers, and creators to step up their game using cutting-edge technology.`} />
+                    description={`Fundamentals Artificial Intelligence AG is a future-oriented tech company devoted to identifying, researching, and developing software products enhancing design-focused workflows using AI and related technologies. We are committed to contributing to a safe and controlled global AI space. Our focus is on intuitive, user-centric tools for artists, designers, media producers, and creators to step up their game using cutting-edge technology.`} /> */}
 
                 <div className="mt-36">
-                    <h3 className="mb-12 text-left text-2xl font-light tracking-[0.25em] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
-                        Try creating videos with AI
-                    </h3>
-                    <p className="text-justify text-3xl font-normal leading-[2.25em]">
-                        Motion Generative Artificial Intelligence for everyone?{' '}
+                    <ContentHeader text={'Try creating videos with AI'} />
+                    <ContentDescription text={<>Motion Generative Artificial Intelligence for everyone?{' '}
                         <span className="font-bold">Here you go!</span> Try our
                         AI video generator for free. Get yourself a Fundamentals
                         log-in and start creating beautiful animated content
                         based on simple text prompts. You receive all rights for
                         your content.
-                    </p>
+                    </>} />
                 </div>
                 <Image
                     alt="demo"
@@ -121,9 +115,9 @@ const HomePage = () => {
                     className="my-12 h-auto w-full"
                 />
                 <div className="mt-32">
-                    <h3 className="mb-12 text-left text-2xl font-light tracking-[0.25em] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
-                        Topics
-                    </h3>
+                    <ContentHeader text={`Topics`} />
+
+
                     <div className="flex w-full flex-col items-center justify-center gap-6">
                         <div className="flex h-96 w-full items-center justify-center rounded-[24px] border-2 border-black bg-[url('../public/topic_1.png')] bg-cover bg-no-repeat">
                             <p className="text-center text-7xl tracking-widest">
@@ -138,9 +132,7 @@ const HomePage = () => {
                     </div>
                 </div>
                 <div className="mt-32">
-                    <h3 className="mb-12 text-left text-2xl font-light tracking-[0.25em] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
-                        News
-                    </h3>
+                    <ContentHeader text={`News`} />
                     <div className="grid h-[700px] grid-cols-1 gap-3 xl:grid-cols-3 xl:gap-6">
                         <div className="flex flex-1 flex-col place-items-center gap-3 rounded-3xl border-[3px] border-black bg-white p-4">
                             <div className="h-2/5 w-full rounded-2xl border-[3px] border-black bg-[#FDF9F5D9]"></div>

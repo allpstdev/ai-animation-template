@@ -1,4 +1,7 @@
+import ContentDescription from '@/components/content/Description'
+import ContentHeader from '@/components/content/Header'
 import Header from '@/components/Header'
+import PageDescription from '@/components/PageDescription'
 import SubHeader from '@/components/SubHeader'
 import Image from 'next/image'
 
@@ -13,11 +16,7 @@ const AboutPage = () => {
         <div>
             <Header text={'About'} />
             <SubHeader text={'Fundamentals Artificial Intelligence'} />
-
-            <h4 className="mb-2 px-44 text-center text-xl font-light tracking-[-0.0001em] sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-5xl">
-                {`Our founding team uses 100+ years combined experience in media, tech, and corporate finance to create AI excellence`}
-            </h4>
-            {/* <div className='min-w-sm h-full'> */}
+            <PageDescription text={`Our founding team uses 100+ years combined experience in media, tech, and corporate finance to create AI excellence`} />
             <Image
                 alt="demo"
                 src={demo}
@@ -27,12 +26,10 @@ const AboutPage = () => {
             />
             <section className="bg-[#FDF9F5] px-44 pb-12 pt-24">
                 <div className="mt-32">
-                    <h3 className="mb-12 text-left text-2xl font-light tracking-[0.25em] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
-                        Our mission
-                    </h3>
-                    <p className="text-justify text-3xl font-normal leading-[2.25em]">
+                    <ContentHeader text={`Our mission`} />
+                    <ContentDescription text=
                         {`We build AI tools, tailor-made for those who put design first - in whatever they do. Our goal is not to replace humans in the visual space but to enhance their creative output with Artificial Intelligence. Technological augmentation of digital art will start creating content that will take our breaths away. All Fundamentals products are trained to understand the personal artistic handwriting of each user. As it learns, our AI starts enhancing work by automating repetitive tasks and suggesting visual elements - in each user's very own style.`}
-                    </p>
+                    />
                 </div>
                 <div className="mt-36">
                     <Image
@@ -45,12 +42,10 @@ const AboutPage = () => {
                 </div>
 
                 <div className="mt-32">
-                    <h3 className="mb-12 text-left text-2xl font-light tracking-[0.25em] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
-                        Our team
-                    </h3>
-                    <p className="text-justify text-3xl font-normal leading-[2.25em]">
+                    <ContentHeader text={`Our team`} />
+                    <ContentDescription text=
                         {`Fundamentals is a tech firm connecting worlds. Our people make it possible, each contributing with their very own skills and experiences. We are a diverse team located in the tech hub of Zug, Switzerland with talent from all parts of the world. We are media creatives, coders, award-winning writers, investment bankers, real estate professionals, consultants, race drivers, digital artists, and professional poker players.Together we forge the Fundamentals team.`}
-                    </p>
+                    />
                     <div className="mt-48 -mb-[2px] ml-44 h-[1px] w-4/5 bg-black" />
                     <div className=" flex flex-col xl:flex-row">
                         <Image
