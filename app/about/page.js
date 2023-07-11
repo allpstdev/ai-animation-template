@@ -1,3 +1,5 @@
+import Header from '@/components/Header'
+import SubHeader from '@/components/SubHeader'
 import Image from 'next/image'
 
 import company_values from '../../public/company_values.svg'
@@ -9,12 +11,8 @@ import profile_mike from '../../public/profile_mike.png'
 const AboutPage = () => {
     return (
         <div>
-            <h1 className="m-10 text-center text-4xl font-bold tracking-widest sm:text-7xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-9xl">
-                About
-            </h1>
-            <h2 className="mb-24 text-center text-2xl font-medium tracking-widest sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-7xl">
-                Fundamentals Artificial Intelligence
-            </h2>
+            <Header text={'About'} />
+            <SubHeader text={'Fundamentals Artificial Intelligence'} />
 
             <h4 className="mb-2 px-44 text-center text-xl font-light tracking-[-0.0001em] sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-5xl">
                 {`Our founding team uses 100+ years combined experience in media, tech, and corporate finance to create AI excellence`}

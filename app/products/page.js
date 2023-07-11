@@ -1,3 +1,5 @@
+import Header from '@/components/Header'
+import SubHeader from '@/components/SubHeader'
 import Image from 'next/image'
 
 import demo from '../../public/Fundamentals_logo_lg.png'
@@ -7,12 +9,8 @@ import products_motion_maker from '../../public/products_motion_maker.png'
 const ProductsPage = () => {
     return (
         <div>
-            <h1 className="m-10 text-center text-4xl font-bold tracking-widest sm:text-7xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-9xl">
-                Products
-            </h1>
-            <h2 className="mb-24 text-center text-2xl font-medium tracking-widest sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-7xl">
-                May we introduce? - AI
-            </h2>
+            <Header text={'Products'} />
+            <SubHeader text={'May we introduce? - AI'} />
 
             <h4 className="mb-2 px-44 text-center text-xl font-light tracking-[-0.0001em] sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-5xl">
                 {`We build forward-thinking AI technology and make it available in user-centric apps. `}

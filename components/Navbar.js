@@ -45,17 +45,17 @@ const Navbar = () => {
                     </Link>
 
                     <span className="hidden py-4 md:block">|</span>
-                    <Link className="block py-2 md:p-4" href="#">
+                    <Link className="block py-2 md:p-4" href="/products">
                         Products
                     </Link>
 
                     <span className="hidden py-4 md:block">|</span>
-                    <Link className="block py-2 font-bold text-purple-400 md:p-4" href="#">
+                    <Link className="block py-2 font-bold text-purple-400 md:p-4" href="/motion_maker">
                         Try<span className="font-normal"> Motion Maker </span>for free
                     </Link>
 
                     <span className="hidden py-4 md:block">|</span>
-                    <Link className="block py-2 md:p-4" href="#">
+                    <Link className="block py-2 md:p-4" href="/contact">
                         Contact us
                     </Link>
                 </div>

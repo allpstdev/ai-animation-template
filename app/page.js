@@ -1,3 +1,6 @@
+import Content from '@/components/Content';
+import Header from '@/components/Header';
+import SubHeader from '@/components/SubHeader';
 import { MyComponent } from '@/components/Swiper'
 /* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image'
@@ -14,12 +17,8 @@ import right_arrow from '../public/right-arrow.svg';
 const HomePage = () => {
     return (
         <div className=''>
-            <h1 className="m-10 text-center text-4xl font-bold tracking-widest sm:text-7xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-9xl">
-                Fundamentals
-            </h1>
-            <h2 className="mb-24 text-center text-2xl font-medium tracking-widest sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-7xl">
-                Artificial Intelligence AG
-            </h2>
+            <Header text={'Fundamentals'} />
+            <SubHeader text={'Artificial Intelligence AG'} />
 
             <h4 className="mb-2 px-44 text-center text-xl font-light tracking-[-0.0001em] sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-5xl">
                 {`We build forward-thinking AI technology and make it available in user-centric apps.`}
@@ -95,6 +94,11 @@ const HomePage = () => {
                         using cutting-edge technology.{' '}
                     </p>
                 </div>
+                <Content
+                    styles={'mt-32'}
+                    header={'About'}
+                    description={`Fundamentals Artificial Intelligence AG is a future-oriented tech company devoted to identifying, researching, and developing software products enhancing design-focused workflows using AI and related technologies. We are committed to contributing to a safe and controlled global AI space. Our focus is on intuitive, user-centric tools for artists, designers, media producers, and creators to step up their game using cutting-edge technology.`} />
+
                 <div className="mt-36">
                     <h3 className="mb-12 text-left text-2xl font-light tracking-[0.25em] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
                         Try creating videos with AI

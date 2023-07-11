@@ -1,3 +1,5 @@
+import Header from '@/components/Header'
+import SubHeader from '@/components/SubHeader'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -10,12 +12,8 @@ import profile_mike from '../../public/profile_mike.png'
 const MotionMakerPage = () => {
     return (
         <div className='bg-[#B19FDC]/20'>
-            <h1 className="p-10 text-center text-4xl font-bold tracking-widest sm:text-7xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-9xl">
-                Motion Maker
-            </h1>
-            <h2 className="mb-24 text-center text-2xl font-medium tracking-widest sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-7xl">
-                The future of media production
-            </h2>
+            <Header text={'Motion Maker'} />
+            <SubHeader text={'The future of media production'} />
 
             {/* <div className='min-w-sm h-full'> */}
             <Image
