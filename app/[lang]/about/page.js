@@ -3,15 +3,38 @@ import ContentHeader from '@/components/content/Header'
 import Header from '@/components/Header'
 import PageDescription from '@/components/PageDescription'
 import SubHeader from '@/components/SubHeader'
+import { dictionary } from '@/content'
 import Image from 'next/image'
 
-import company_values from '../../public/company_values.svg'
-import demo from '../../public/Fundamentals_logo_lg.png'
-import profile_gunther from '../../public/profile_gunther.png'
-import profile_mario from '../../public/profile_mario.png'
-import profile_mike from '../../public/profile_mike.png'
+import company_values from '../../../public/company_values.svg'
+import ellipse from '../../../public/ellipse.svg';
+import demo from '../../../public/Fundamentals_logo_lg.png'
+import profile_gunther from '../../../public/profile_gunther.png'
+import profile_mario from '../../../public/profile_mario.png'
+import profile_mike from '../../../public/profile_mike.png'
 
-const AboutPage = () => {
+const AboutPage = ({
+    params
+}) => {
+    const {
+        page_header,
+        page_sub_header,
+        page_description,
+        content_1_header,
+        content_1_decription,
+        content_2_header,
+        content_2_decription,
+        mario_designation,
+        mario_description,
+        mario_qoute,
+        mike_designation,
+        mike_description,
+        mike_qoute,
+        gunther_designation,
+        gunther_description,
+        gunther_qoute,
+    } = dictionary[params.lang]?.about
+
     return (
         <div>
             <Header text={'About'} />
@@ -24,12 +47,21 @@ const AboutPage = () => {
                 height="0"
                 className='w-full lg:w-1/2 mx-auto lg:mx-auto mb-72 mt-20'
             />
-            <section className="bg-[#FDF9F5] px-44 pb-12 pt-24">
+
+            <div >
+                <Image
+                    alt="demo"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: '100%', height: 'auto' }}
+                    src={ellipse}
+                />
+            </div>
+            <section className="bg-[#FDF9F5] pt-40 pb-12 px-28">
                 <div className="mt-32">
-                    <ContentHeader text={`Our mission`} />
-                    <ContentDescription text=
-                        {`We build AI tools, tailor-made for those who put design first - in whatever they do. Our goal is not to replace humans in the visual space but to enhance their creative output with Artificial Intelligence. Technological augmentation of digital art will start creating content that will take our breaths away. All Fundamentals products are trained to understand the personal artistic handwriting of each user. As it learns, our AI starts enhancing work by automating repetitive tasks and suggesting visual elements - in each user's very own style.`}
-                    />
+                    <ContentHeader text={content_1_header} />
+                    <ContentDescription text={content_1_decription} />
                 </div>
                 <div className="mt-36">
                     <Image
@@ -42,10 +74,8 @@ const AboutPage = () => {
                 </div>
 
                 <div className="mt-32">
-                    <ContentHeader text={`Our team`} />
-                    <ContentDescription text=
-                        {`Fundamentals is a tech firm connecting worlds. Our people make it possible, each contributing with their very own skills and experiences. We are a diverse team located in the tech hub of Zug, Switzerland with talent from all parts of the world. We are media creatives, coders, award-winning writers, investment bankers, real estate professionals, consultants, race drivers, digital artists, and professional poker players.Together we forge the Fundamentals team.`}
-                    />
+                    <ContentHeader text={content_2_header} />
+                    <ContentDescription text={content_2_decription} />
                     <div className="mt-48 -mb-[2px] ml-44 h-[1px] w-4/5 bg-black" />
                     <div className=" flex flex-col xl:flex-row">
                         <Image
@@ -60,23 +90,16 @@ const AboutPage = () => {
                                 Mario Wiedl
                             </div>
                             <div className="text-4xl font-light tracking-default text-black/[0.8]">
-                                Co-Founder and CEO
+                                {mario_designation}
                             </div>
                         </div>
                     </div>
                     <div className="py-12">
                         <div className="text-center  text-4xl font-normal leading-[66px] tracking-widest text-black">
-                            5+ years experience in corporate finance, building
-                            tech start-ups and building / managing development
-                            teams.
+                            {mario_description}
                         </div>
                         <div className="mt-10 text-center text-2xl  font-normal leading-[66px]  tracking-widest text-black">
-                            “ Imagine anyone could create the same high-end
-                            content. No design teams, up to 90% faster than
-                            before, no complex tools. All you need is your
-                            imagination. We would change the game! Entertainment
-                            would be all about creativity — not big budgets.
-                            That’s what I want to build. “
+                            {mario_qoute}
                         </div>
                     </div>
                     <br />
@@ -95,16 +118,16 @@ const AboutPage = () => {
                                 Mike Milligan
                             </div>
                             <div className="text-4xl font-light tracking-default text-black/[0.8]">
-                                Co-Founder and CTO
+                                {mike_designation}
                             </div>
                         </div>
                     </div>
                     <div className="py-12 px-5 mt-2">
                         <div className="text-center  text-4xl font-normal leading-[66px] tracking-widest text-black">
-                            20+ years experience in animation, media production, script writing, web design, and software development.
+                            {mike_description}
                         </div>
                         <div className="mt-10 text-center text-2xl font-normal leading-[66px] tracking-widest text-black">
-                            “ I want to build a useful integration of AI into the highly manual and inefficient workflows of traditional media production and design. Generative AI allows designers to focus on their visuals rather than fighting with complex tools. That’s the goal I ultimately want to achieve. “
+                            {mike_qoute}
                         </div>
                     </div>
 
@@ -122,16 +145,16 @@ const AboutPage = () => {
                                 Günther Lüttecke
                             </div>
                             <div className="text-4xl font-light tracking-default text-black/[0.8]">
-                                President of the board of directors
+                                {gunther_designation}
                             </div>
                         </div>
                     </div>
                     <div className="py-10 mt-2">
                         <div className="text-center  text-4xl font-normal leading-[66px] tracking-widest text-black">
-                            50+ years experience in project management, real estate development, building teams and business strategies.
+                            {gunther_description}
                         </div>
                         <div className="mt-10 text-center text-2xl  font-normal leading-[66px] tracking-widest text-black">
-                            MISSING!
+                            {gunther_qoute}
                         </div>
                     </div>
                 </div>

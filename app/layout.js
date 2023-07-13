@@ -2,6 +2,7 @@ import './globals.css';
 
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import { defaultLocale } from "@/middleware"
 import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
 
@@ -22,10 +23,10 @@ const euclid = localFont({
     variable: '--font-euclid',
 });
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, params }) {
     return (
-        <html lang="en" className={`${euclid.variable} ${inter.variable}`}>
-            <body className="bg-[url('../public/bg-pattern.svg')] bg-cover bg-repeat-y">
+        <html lang={params.lang ?? defaultLocale} className={`${euclid.variable} ${inter.variable}`}>
+            <body className={`bg-[url('../public/bg-pattern.svg')] bg-cover bg-repeat-y`}>
                 <Navbar />
                 <main>{children}</main>
                 <Footer />

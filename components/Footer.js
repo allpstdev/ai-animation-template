@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import fundamentals_logo from '../public/fundamentals_logo.png'
+
 const Footer = () => {
     return (
         <footer>
@@ -45,7 +47,7 @@ const Footer = () => {
                                 </div>
                             </div>
                             <div className="relative mx-auto h-[6.25rem] w-[6.875rem]">
-                                <Image src={'/fundamentals_logo.png'} alt="fundamentals logo" fill />
+                                <Image src={fundamentals_logo} alt="fundamentals logo" style={{ objectFit: "cover" }} fill />
                             </div>
                         </div>
                     </div>

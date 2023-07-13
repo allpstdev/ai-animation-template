@@ -1,27 +1,54 @@
+'use client';
+
 import ContentDescription from '@/components/content/Description';
 import ContentHeader from '@/components/content/Header';
 import Header from '@/components/Header';
 import PageDescription from '@/components/PageDescription';
 import SubHeader from '@/components/SubHeader';
 import { MyComponent } from '@/components/Swiper'
+import { dictionary } from '@/content';
 /* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image'
 import React from 'react'
 
-import demo from '../public/demo.png';
-import image1 from '../public/image1.png';
-import image2 from '../public/image2.png';
-import image3 from '../public/image3.png';
-import image4 from '../public/image4.png';
-import left_arrow from '../public/left-arrow.svg';
-import right_arrow from '../public/right-arrow.svg';
+import demo from '../../public/demo.png';
+import ellipse from '../../public/ellipse.svg';
+import image1 from '../../public/image1.png';
+import image2 from '../../public/image2.png';
+import image3 from '../../public/image3.png';
+import image4 from '../../public/image4.png';
+import left_arrow from '../../public/left-arrow.svg';
+import right_arrow from '../../public/right-arrow.svg';
 
-const HomePage = () => {
+const HomePage = ({
+    params
+}) => {
+    const {
+        page_header,
+        page_sub_header,
+        page_description,
+        page_card1,
+        page_card2,
+        page_card3,
+        page_card4,
+        content_1_header,
+        content_1_decription,
+        content_2_header,
+        content_2_decription_part1,
+        content_2_decription_part_bold,
+        content_2_decription_part2,
+        content_3_header,
+        content_3_card_1,
+        content_3_card_2,
+        content_4_header,
+        content_4_card
+    } = dictionary[params.lang]?.home
+
     return (
         <div className=''>
-            <Header text={'Fundamentals'} />
-            <SubHeader text={'Artificial Intelligence AG'} />
-            <PageDescription text={`We build forward-thinking AI technology and make it available in user-centric apps.`} />
+            <Header text={page_header} />
+            <SubHeader text={page_sub_header} />
+            <PageDescription text={page_description} />
 
             <Image
                 alt="demo"
@@ -29,82 +56,86 @@ const HomePage = () => {
                 width="0"
                 height="0"
                 sizes="100vw"
-                className="w-100vw mx-auto my-12 h-auto"
+                className="w-100vw mx-auto mb-96 mt-12 h-auto px-2"
             />
-            <section className="bg-[#FDF9F5] pb-12 px-44 pt-24">
+            <div >
+                <Image
+                    alt="demo"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: '100%', height: 'auto' }}
+                    src={ellipse}
+                />
+            </div>
+            <section className="bg-[#FDF9F5] pt-40 pb-12 px-28">
                 <div className="grid grid-cols-1 gap-3 lg:grid-cols-4 lg:gap-4">
                     <div className="flex flex-1 flex-col p-4 place-items-center gap-3 rounded-3xl border-2 border-black">
                         <Image
-                            alt="media production and animation image"
+                            alt={page_card1}
                             src={image1}
                             width="0"
                             height="0"
                             className='w-52 h-3/4'
                         />
-                        <p className="text-center text-3xl font-normal">Media production and animation</p>
+                        <p className="text-center text-3xl font-normal">
+                            {page_card1}
+                        </p>
                     </div>
                     <div className="flex flex-1 flex-col p-4 place-items-center gap-3 rounded-3xl border-2 border-black">
                         <Image
-                            alt="Creation of virtual worlds image"
+                            alt={page_card2}
                             src={image2}
                             width="0"
                             height="0"
                             className='w-52 h-3/4'
                         />
-                        <p className="text-center text-3xl font-normal">Creation of virtual worlds</p>
+                        <p className="text-center text-3xl font-normal">
+                            {page_card2}
+                        </p>
                     </div>
                     <div className="flex flex-1 flex-col p-4 place-items-center gap-3 rounded-3xl border-2 border-black">
                         <Image
-                            alt="Augmentation of creative workflows image"
+                            alt={page_card3}
                             src={image3}
                             width="0"
                             height="0"
                             className='w-52 h-3/4'
                         />
                         <p className="text-center text-3xl font-normal">
-                            Augmentation of creative workflows
+                            {page_card3}
                         </p>
                     </div>
                     <div className="flex flex-1 flex-col place-items-center gap-3 rounded-3xl border-2 border-black p-4">
                         <Image
-                            alt="Make AI available to users image"
+                            alt={page_card4}
                             src={image4}
                             width="0"
                             height="0"
                             className="h-3/4 w-52"
                         />
                         <p className="text-center text-3xl font-normal">
-                            Make AI available to users
+                            {page_card4}
                         </p>
                     </div>
                 </div>
                 <div className="mt-32">
-                    <ContentHeader text={'About'} />
-                    <ContentDescription text={`Fundamentals Artificial Intelligence AG is a
-                        future-oriented tech company devoted to identifying,
-                        researching, and developing software products enhancing
-                        design-focused workflows using AI and related
-                        technologies. We are committed to contributing to a safe
-                        and controlled global AI space. Our focus is on
-                        intuitive, user-centric tools for artists, designers,
-                        media producers, and creators to step up their game
-                        using cutting-edge technology.`}
+                    <ContentHeader text={content_1_header} />
+                    <ContentDescription text={content_1_decription}
                     />
                 </div>
-                {/* <Content
-                    styles={'mt-32'}
-                    header={'About'}
-                    description={`Fundamentals Artificial Intelligence AG is a future-oriented tech company devoted to identifying, researching, and developing software products enhancing design-focused workflows using AI and related technologies. We are committed to contributing to a safe and controlled global AI space. Our focus is on intuitive, user-centric tools for artists, designers, media producers, and creators to step up their game using cutting-edge technology.`} /> */}
 
                 <div className="mt-36">
-                    <ContentHeader text={'Try creating videos with AI'} />
-                    <ContentDescription text={<>Motion Generative Artificial Intelligence for everyone?{' '}
-                        <span className="font-bold">Here you go!</span> Try our
-                        AI video generator for free. Get yourself a Fundamentals
-                        log-in and start creating beautiful animated content
-                        based on simple text prompts. You receive all rights for
-                        your content.
-                    </>} />
+                    <ContentHeader text={content_2_header} />
+                    <ContentDescription text={
+                        <>
+                            {content_2_decription_part1}
+                            <span className="font-bold">
+                                {content_2_decription_part_bold}
+                            </span>
+                            {content_2_decription_part2}
+                        </>
+                    } />
                 </div>
                 <Image
                     alt="demo"
@@ -115,53 +146,39 @@ const HomePage = () => {
                     className="my-12 h-auto w-full"
                 />
                 <div className="mt-32">
-                    <ContentHeader text={`Topics`} />
-
-
+                    <ContentHeader text={content_3_header} />
                     <div className="flex w-full flex-col items-center justify-center gap-6">
                         <div className="flex h-96 w-full items-center justify-center rounded-[24px] border-2 border-black bg-[url('../public/topic_1.png')] bg-cover bg-no-repeat">
                             <p className="text-center text-7xl tracking-widest">
-                                MediaTech
+                                {content_3_card_1}
                             </p>
                         </div>
                         <div className="flex h-96 w-full items-center justify-center rounded-[24px] border-2 border-black bg-[url('../public/topic_2.png')] bg-cover bg-no-repeat">
                             <p className="text-center text-7xl tracking-widest">
-                                Real Estate
+                                {content_3_card_2}
                             </p>
                         </div>
                     </div>
                 </div>
                 <div className="mt-32">
-                    <ContentHeader text={`News`} />
+                    <ContentHeader text={content_4_header} />
                     <div className="grid h-[700px] grid-cols-1 gap-3 xl:grid-cols-3 xl:gap-6">
                         <div className="flex flex-1 flex-col place-items-center gap-3 rounded-3xl border-[3px] border-black bg-white p-4">
                             <div className="h-2/5 w-full rounded-2xl border-[3px] border-black bg-[#FDF9F5D9]"></div>
                             <p className="font-inter h-3/5 text-justify text-xl leading-10">
-                                Integrate generative AI into your animation
-                                workflow, decrease production time and budget
-                                and be in control of the creative process of
-                                your project like never before. With
-                                Fundamentals Motion Maker.
+                                {content_4_card}
                             </p>
                         </div>
                         <div className="flex flex-1 flex-col place-items-center gap-3 rounded-3xl border-[3px] border-black bg-white p-4">
                             <div className="h-2/5 w-full rounded-2xl border-[3px] border-black bg-[#FDF9F5D9]"></div>
                             <p className="font-inter h-3/5 text-justify text-xl leading-10">
-                                Integrate generative AI into your animation
-                                workflow, decrease production time and budget
-                                and be in control of the creative process of
-                                your project like never before. With
-                                Fundamentals Motion Maker.
+                                {content_4_card}
                             </p>
                         </div>
                         <div className="flex flex-1 flex-col place-items-center gap-3 rounded-3xl border-[3px] border-black bg-white p-4">
                             <div className="h-2/5 w-full rounded-2xl border-[3px] border-black bg-[#FDF9F5D9]"></div>
                             <p className="font-inter h-3/5 text-justify text-xl leading-10">
-                                Integrate generative AI into your animation
-                                workflow, decrease production time and budget
-                                and be in control of the creative process of
-                                your project like never before. With
-                                Fundamentals Motion Maker.
+                                {content_4_card}
                             </p>
                         </div>
                     </div>

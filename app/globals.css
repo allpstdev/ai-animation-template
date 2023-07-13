@@ -3,24 +3,24 @@
 @tailwind utilities;
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: var(--font-euclid);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-euclid);
 }
 
 .rectangle {
-  background-color: darkblue;
-  width: 300px;
-  height: 500px;
-  overflow: hidden;
+    background-color: darkblue;
+    width: 300px;
+    height: 500px;
+    overflow: hidden;
 }
 
 .custom-oval {
-  background: rgba(253, 249, 245, 0.85);
-  width: 100%;
-  height: calc(100vw/5);
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border-top: 2px solid black;
+    background: rgba(253, 249, 245, 0.85);
+    width: 100%;
+    height: calc(100vw / 5);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-top: 2px solid black;
 }

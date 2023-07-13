@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
+import fundamentals_logo from '../public/fundamentals_logo.png'
+
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -16,7 +18,7 @@ const Navbar = () => {
             <div>
                 <Link href="/">
                     <div className="relative mx-auto my-2 h-[5.71rem] w-[6.25rem]">
-                        <Image src={'/fundamentals_logo.png'} alt="fundamentals logo" fill />
+                        <Image src={fundamentals_logo} alt="fundamentals logo" fill />
                     </div>
                 </Link>
             </div>
