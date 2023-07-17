@@ -117,7 +117,7 @@ export const dictionary = {
         },
         footer: {
             left_description: 'Integre IA generativa en su flujo de trabajo de animación, reduzca el tiempo y el presupuesto de producción y controle el proceso creativo de su proyecto como nunca antes. Con Fundamentos Motion Maker.',
-            right_header: 'Fundamentals Artificial Intelligence AG',
+            right_header: 'Fundamentos Inteligencia Artificial AG',
             right_sub_header: 'Registrado en Zug, ZG, Suiza bajo CHE-',
             site_map_header: 'Mapa del sitio',
             link_1: 'Acerca de',

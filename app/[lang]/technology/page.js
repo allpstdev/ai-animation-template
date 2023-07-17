@@ -1,4 +1,5 @@
 import ContentDescription from '@/components/content/Description'
+import EllipseComponent from '@/components/content/EllipseComponent'
 import ContentHeader from '@/components/content/Header'
 import Header from '@/components/Header'
 import PageDescription from '@/components/PageDescription'
@@ -6,7 +7,6 @@ import SubHeader from '@/components/SubHeader'
 import { dictionary } from '@/content'
 import Image from 'next/image'
 
-import ellipse from '../../../public/ellipse.svg';
 import demo from '../../../public/Fundamentals_logo_lg.png'
 
 const TechnologyPage = ({
@@ -37,31 +37,22 @@ const TechnologyPage = ({
                 height="0"
                 className='w-full lg:w-1/2 mx-auto lg:mx-auto mb-72 mt-20 invisible'
             />
-            <div >
-                <Image
-                    alt="demo"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{ width: '100%', height: 'auto' }}
-                    src={ellipse}
-                />
-            </div>
+            <EllipseComponent />
             <section className="bg-[#FDF9F5] pt-40 pb-12 px-28">
                 <div className="mt-32 pb-96">
-                    <div>
+                    <div className='mb-60'>
                         <ContentHeader text={content_1_header} />
                         <ContentDescription text={content_1_decription} />
                     </div>
-                    <div>
+                    <div className='mb-60'>
                         <ContentHeader text={content_2_header} />
                         <ContentDescription text={content_2_decription} />
                     </div>
-                    <div>
+                    <div className='mb-60'>
                         <ContentHeader text={content_3_header} />
                         <ContentDescription text={content_3_decription} />
                     </div>
-                    <div>
+                    <div className='mb-60'>
                         <ContentHeader text={content_4_header} />
                         <ContentDescription text={content_4_decription} />
                     </div>

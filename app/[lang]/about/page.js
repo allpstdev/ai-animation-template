@@ -1,4 +1,5 @@
 import ContentDescription from '@/components/content/Description'
+import EllipseComponent from '@/components/content/EllipseComponent'
 import ContentHeader from '@/components/content/Header'
 import Header from '@/components/Header'
 import PageDescription from '@/components/PageDescription'
@@ -7,7 +8,6 @@ import { dictionary } from '@/content'
 import Image from 'next/image'
 
 import company_values from '../../../public/company_values.svg'
-import ellipse from '../../../public/ellipse.svg';
 import demo from '../../../public/Fundamentals_logo_lg.png'
 import profile_gunther from '../../../public/profile_gunther.png'
 import profile_mario from '../../../public/profile_mario.png'
@@ -37,9 +37,9 @@ const AboutPage = ({
 
     return (
         <div>
-            <Header text={'About'} />
-            <SubHeader text={'Fundamentals Artificial Intelligence'} />
-            <PageDescription text={`Our founding team uses 100+ years combined experience in media, tech, and corporate finance to create AI excellence`} />
+            <Header text={page_header} />
+            <SubHeader text={page_sub_header} />
+            <PageDescription text={page_description} />
             <Image
                 alt="demo"
                 src={demo}
@@ -48,27 +48,19 @@ const AboutPage = ({
                 className='w-full lg:w-1/2 mx-auto lg:mx-auto mb-72 mt-20'
             />
 
-            <div >
-                <Image
-                    alt="demo"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{ width: '100%', height: 'auto' }}
-                    src={ellipse}
-                />
-            </div>
+            <EllipseComponent />
+
             <section className="bg-[#FDF9F5] pt-40 pb-12 px-28">
                 <div className="mt-32">
                     <ContentHeader text={content_1_header} />
                     <ContentDescription text={content_1_decription} />
                 </div>
-                <div className="mt-36">
+                <div className="my-60">
                     <Image
                         alt="company values"
                         width={0}
                         height={0}
-                        className="w-100vw h-auto"
+                        className="w-100vw h-auto mx-auto"
                         src={company_values}
                     />
                 </div>
@@ -95,17 +87,17 @@ const AboutPage = ({
                         </div>
                     </div>
                     <div className="py-12">
-                        <div className="text-center  text-4xl font-normal leading-[66px] tracking-widest text-black">
+                        <div className="mt-20 text-center  text-4xl font-normal leading-[66px] tracking-widest text-black">
                             {mario_description}
                         </div>
-                        <div className="mt-10 text-center text-2xl  font-normal leading-[66px]  tracking-widest text-black">
+                        <div className="my-10 text-center text-2xl  font-normal leading-[66px]  tracking-widest text-black">
                             {mario_qoute}
                         </div>
                     </div>
                     <br />
 
                     <div className="-mb-[3px] ml-44 h-[1px] w-4/5 bg-black" />
-                    <div className=" flex flex-col xl:flex-row">
+                    <div className="flex flex-col xl:flex-row">
                         <Image
                             alt="Mike Milligan profile picture"
                             width={0}
@@ -123,16 +115,16 @@ const AboutPage = ({
                         </div>
                     </div>
                     <div className="py-12 px-5 mt-2">
-                        <div className="text-center  text-4xl font-normal leading-[66px] tracking-widest text-black">
+                        <div className="mt-16 text-center  text-4xl font-normal leading-[66px] tracking-widest text-black">
                             {mike_description}
                         </div>
-                        <div className="mt-10 text-center text-2xl font-normal leading-[66px] tracking-widest text-black">
+                        <div className="my-10 text-center text-2xl font-normal leading-[66px] tracking-widest text-black">
                             {mike_qoute}
                         </div>
                     </div>
 
                     <div className="-mb-[4px] ml-44 h-[1px] w-4/5 bg-black" />
-                    <div className=" flex flex-col xl:flex-row">
+                    <div className="flex flex-col xl:flex-row">
                         <Image
                             alt="Günther Lüttecke profile picture"
                             width={0}
@@ -150,7 +142,7 @@ const AboutPage = ({
                         </div>
                     </div>
                     <div className="py-10 mt-2">
-                        <div className="text-center  text-4xl font-normal leading-[66px] tracking-widest text-black">
+                        <div className="mt-16 text-center  text-4xl font-normal leading-[66px] tracking-widest text-black">
                             {gunther_description}
                         </div>
                         <div className="mt-10 text-center text-2xl  font-normal leading-[66px] tracking-widest text-black">

@@ -26,9 +26,11 @@ const euclid = localFont({
 export default function RootLayout({ children, params }) {
     return (
         <html lang={params.lang ?? defaultLocale} className={`${euclid.variable} ${inter.variable}`}>
-            <body className={`bg-[url('../public/bg-pattern.svg')] bg-cover bg-repeat-y`}>
+            <body>
                 <Navbar />
-                <main>{children}</main>
+                <main>
+                    {children}
+                </main>
                 <Footer />
             </body>
         </html>

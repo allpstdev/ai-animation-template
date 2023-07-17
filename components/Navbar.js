@@ -1,12 +1,25 @@
 'use client';
 
+import { dictionary } from '@/content';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import { useState } from 'react';
 
 import fundamentals_logo from '../public/fundamentals_logo.png'
 
 const Navbar = () => {
+    const params = useParams()
+    const {
+        link_1,
+        link_2,
+        link_3,
+        link_4_part_1,
+        link_4_thin,
+        link_4_part_2,
+        link_5,
+    } = dictionary[params.lang]?.navbar
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -18,7 +31,7 @@ const Navbar = () => {
             <div>
                 <Link href="/">
                     <div className="relative mx-auto my-2 h-[5.71rem] w-[6.25rem]">
-                        <Image src={fundamentals_logo} alt="fundamentals logo" fill />
+                        <Image src={fundamentals_logo} alt="fundamentals logo" fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' />
                     </div>
                 </Link>
             </div>
@@ -38,27 +51,27 @@ const Navbar = () => {
             <div className={`${!isMenuOpen && 'hidden'} w-full md:flex md:w-auto md:items-center`}>
                 <div className="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0">
                     <Link className="block py-2 md:p-4" href="/about">
-                        About
+                        {link_1}
                     </Link>
 
                     <span className="hidden py-4 md:block">|</span>
                     <Link className="block py-2 md:p-4" href="/technology">
-                        Technology
+                        {link_2}
                     </Link>
 
                     <span className="hidden py-4 md:block">|</span>
                     <Link className="block py-2 md:p-4" href="/products">
-                        Products
+                        {link_3}
                     </Link>
 
                     <span className="hidden py-4 md:block">|</span>
                     <Link className="block py-2 font-bold text-purple-400 md:p-4" href="/motion_maker">
-                        Try<span className="font-normal"> Motion Maker </span>for free
+                        {link_4_part_1}<span className="font-normal"> {link_4_thin} </span>{link_4_part_2}
                     </Link>
 
                     <span className="hidden py-4 md:block">|</span>
                     <Link className="block py-2 md:p-4" href="/contact">
-                        Contact us
+                        {link_5}
                     </Link>
                 </div>
             </div>

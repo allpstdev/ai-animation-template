@@ -1,9 +1,9 @@
+import EllipseComponent from '@/components/content/EllipseComponent';
 import Header from '@/components/Header'
 import SubHeader from '@/components/SubHeader'
 import { dictionary } from '@/content';
 import Image from 'next/image'
 
-import ellipse from '../../../public/ellipse.svg';
 import demo from '../../../public/Fundamentals_logo_lg.png'
 import products_interface from '../../../public/products_interface.png'
 import products_motion_maker from '../../../public/products_motion_maker.png'
@@ -23,16 +23,7 @@ const ContactPage = ({
                 height="0"
                 className='w-full lg:w-1/2 mx-auto lg:mx-auto mb-72 mt-20 invisible'
             />
-            <div >
-                <Image
-                    alt="demo"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{ width: '100%', height: 'auto' }}
-                    src={ellipse}
-                />
-            </div>
+            <EllipseComponent />
             <section className="bg-[#FDF9F5] pt-40 pb-12 px-28">
                 <div className="mt-32 invisible">
                     <div className="flex w-full flex-col items-center justify-center gap-32">

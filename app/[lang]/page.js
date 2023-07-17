@@ -1,6 +1,7 @@
 'use client';
 
 import ContentDescription from '@/components/content/Description';
+import EllipseComponent from '@/components/content/EllipseComponent'
 import ContentHeader from '@/components/content/Header';
 import Header from '@/components/Header';
 import PageDescription from '@/components/PageDescription';
@@ -12,7 +13,6 @@ import Image from 'next/image'
 import React from 'react'
 
 import demo from '../../public/demo.png';
-import ellipse from '../../public/ellipse.svg';
 import image1 from '../../public/image1.png';
 import image2 from '../../public/image2.png';
 import image3 from '../../public/image3.png';
@@ -58,16 +58,7 @@ const HomePage = ({
                 sizes="100vw"
                 className="w-100vw mx-auto mb-96 mt-12 h-auto px-2"
             />
-            <div >
-                <Image
-                    alt="demo"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{ width: '100%', height: 'auto' }}
-                    src={ellipse}
-                />
-            </div>
+            <EllipseComponent />
             <section className="bg-[#FDF9F5] pt-40 pb-12 px-28">
                 <div className="grid grid-cols-1 gap-3 lg:grid-cols-4 lg:gap-4">
                     <div className="flex flex-1 flex-col p-4 place-items-center gap-3 rounded-3xl border-2 border-black">
@@ -162,7 +153,7 @@ const HomePage = ({
                 </div>
                 <div className="mt-32">
                     <ContentHeader text={content_4_header} />
-                    <div className="grid h-[700px] grid-cols-1 gap-3 xl:grid-cols-3 xl:gap-6">
+                    <div className="grid h-[700px] grid-cols-3 gap-6 xl:grid-cols-3 xl:gap-20">
                         <div className="flex flex-1 flex-col place-items-center gap-3 rounded-3xl border-[3px] border-black bg-white p-4">
                             <div className="h-2/5 w-full rounded-2xl border-[3px] border-black bg-[#FDF9F5D9]"></div>
                             <p className="font-inter h-3/5 text-justify text-xl leading-10">

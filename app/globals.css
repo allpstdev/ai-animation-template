@@ -24,3 +24,9 @@
     border-top-right-radius: 50%;
     border-top: 2px solid black;
 }
+
+body {
+    background-image: url("../public/bg-pattern.png");
+    background-repeat: repeat-y;
+    background-size: contain;
+}
