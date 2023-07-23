@@ -9,9 +9,7 @@ import Image from 'next/image'
 
 import motion_maker_demo from '../../../public/motion_maker_demo.png'
 
-const MotionMakerPage = ({
-    params
-}) => {
+const MotionMakerPage = ({ params }) => {
     const {
         page_header,
         page_sub_header,
@@ -29,22 +27,25 @@ const MotionMakerPage = ({
         content_4_button,
         content_5_header,
         content_5_decription,
-        content_5_button,
+        content_5_button
     } = dictionary[params.lang]?.motion_maker
     return (
         <div className='bg-[#B19FDC]/20'>
             <Header text={page_header} />
             <SubHeader text={page_sub_header} />
-            <Image
-                alt="motion maker demo"
-                src={motion_maker_demo}
-                width="0"
-                height="0"
-                className='w-full lg:w-2/3 mx-auto lg:mx-auto mb-72 mt-64'
-            />
+            <div className='my-20 xl:my-60'>
+                <Image
+                    alt='motion maker demo'
+                    src={motion_maker_demo}
+                    width='0'
+                    height='0'
+                    sizes='100vw'
+                    className='w-100vw mx-auto h-auto px-2 xl:px-8'
+                />
+            </div>
             <EllipseComponent variant={'purple'} />
-            <section className="bg-[#B19FDC]/25 pt-40 pb-12 px-28">
-                <div className="mt-32 pb-96">
+            <section className='bg-[#B19FDC]/25 pt-20 px-4 xl:pt-40 xl:pb-12 xl:px-28'>
+                <div className='pb-96'>
                     <div className='mt-60'>
                         <ContentHeader text={content_1_header} />
                         <ContentDescription text={content_1_decription} />
@@ -54,28 +55,25 @@ const MotionMakerPage = ({
                         <ContentHeader text={content_2_header} />
                         <ContentDescription text={content_2_decription} />
                         <ContentButton text={content_2_button} />
-
                     </div>
                     <div className='mt-60'>
                         <ContentHeader text={content_3_header} />
                         <ContentDescription text={content_3_decription} />
                         <ContentButton text={content_3_button} />
-
                     </div>
                     <div className='mt-60'>
                         <ContentHeader text={content_4_header} />
                         <ContentDescription text={content_4_decription} />
                         <ContentButton text={content_4_button} />
-
                     </div>
                     <div className='mt-60'>
                         <ContentHeader text={content_5_header} />
                         <ContentDescription text={content_5_decription} />
                         <ContentButton text={content_5_button} />
                     </div>
-                </div >
-            </section >
-        </div >
+                </div>
+            </section>
+        </div>
     )
 }
 

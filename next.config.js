@@ -2,8 +2,8 @@
 const nextConfig = {
     compiler: {
         styledComponents: {
-            displayName: false,
-        },
+            displayName: false
+        }
     }
 }
 
